@@ -11,19 +11,15 @@ body {
     background: lightgrey;
 }
 
-.firstPoster {
-    position: absolute;
-    top: 70px;
-    left: 0;
+.horizontalPanel {
+    margin: 20px;
 }
 
-.secondPoster {
-    position: absolute;
-    top: 70px;
-    right: 0;
+.westVerticalPanel {
+    margin: 20px;
 }
 
-H1 {
+.labelCinema {
     font-size: 50px;
     font-weight: normal;
     text-shadow: 1px 1px white,
@@ -32,3 +28,7 @@ H1 {
     transition: all 1s;
 }
 
+.dockpanel td {
+    border: 1px solid #BBBBBB;
+    padding: 3px;
+}

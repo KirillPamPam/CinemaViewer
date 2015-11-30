@@ -16,6 +16,12 @@ public class CinemaComposition extends Composite {
     private TextBox search = new TextBox();
     private Image firstPoster = new Image(MyResources.INSTANCE.getFirstPoster());
     private Image secondPoster = new Image(MyResources.INSTANCE.getThirdPoster());
+    private Image first_news = new Image(MyResources.INSTANCE.getFirstNew());
+    private Image second_news = new Image(MyResources.INSTANCE.getSecondNew());
+    private Image third_news = new Image(MyResources.INSTANCE.getThirdNew());
+    private Image fourth_news = new Image(MyResources.INSTANCE.getFourthNew());
+    private Image fifth_news = new Image(MyResources.INSTANCE.getFifthNew());
+    private Image sixth_news = new Image(MyResources.INSTANCE.getSixthtNew());
     private String firstSite, secondSite;
 
     public CinemaComposition() {
@@ -27,6 +33,8 @@ public class CinemaComposition extends Composite {
 
     private void addComposition() {
         HorizontalPanel horizontalPanel = new HorizontalPanel();
+        HorizontalPanel newsHorizontalPanel = new HorizontalPanel();
+        HorizontalPanel newsHorizontalPanel_1 = new HorizontalPanel();
         VerticalPanel centerVerticalPanel = new VerticalPanel();
         VerticalPanel westVerticalPanel = new VerticalPanel();
         VerticalPanel eastVerticalPanel = new VerticalPanel();
@@ -40,7 +48,7 @@ public class CinemaComposition extends Composite {
 
         dockPanel.setStyleName("dockpanel");
         dockPanel.setWidth("100%");
-        dockPanel.setHeight("150%");
+        dockPanel.setHeight("1000px");
 
         Label cinemaViewer = new Label("CinemaViewer");
         Label news = new Label("News");
@@ -49,6 +57,15 @@ public class CinemaComposition extends Composite {
         Label soonInCinema = new Label("Soon in the cinema");
         Label soonInCinema1 = new Label("Soon in the cinema");
         Label filmOfDay = new Label("Film of day");
+        Label actor = new Label("Actor");
+
+        soonInCinema.setStyleName("labelWestAndEast");
+        soonInCinema1.setStyleName("labelWestAndEast");
+        filmOfDay.setStyleName("labelWestAndEast");
+        actor.setStyleName("labelWestAndEast");
+        news.setStyleName("labelCenter");
+        rating.setStyleName("labelCenter");
+        article.setStyleName("labelCenter");
 
         westVerticalPanel.add(soonInCinema);
         westVerticalPanel.add(firstPoster);
@@ -58,9 +75,22 @@ public class CinemaComposition extends Composite {
 
         eastVerticalPanel.add(soonInCinema1);
         eastVerticalPanel.add(secondPoster);
+        eastVerticalPanel.add(actor);
         eastVerticalPanel.setCellHorizontalAlignment(soonInCinema1, HasHorizontalAlignment.ALIGN_CENTER);
+        eastVerticalPanel.setCellHorizontalAlignment(actor, HasHorizontalAlignment.ALIGN_CENTER);
+
+        setSizeToImage();
+
+        newsHorizontalPanel.add(first_news);
+        newsHorizontalPanel.add(second_news);
+        newsHorizontalPanel.add(third_news);
+        newsHorizontalPanel_1.add(fourth_news);
+        newsHorizontalPanel_1.add(fifth_news);
+        newsHorizontalPanel_1.add(sixth_news);
 
         centerVerticalPanel.add(news);
+        centerVerticalPanel.add(newsHorizontalPanel);
+        centerVerticalPanel.add(newsHorizontalPanel_1);
         centerVerticalPanel.add(article);
         centerVerticalPanel.add(rating);
 
@@ -106,4 +136,12 @@ public class CinemaComposition extends Composite {
         });
     }
 
+    private void setSizeToImage() {
+        first_news.setSize("75px", "100px");
+        second_news.setSize("75px", "100px");
+        third_news.setSize("75px", "100px");
+        fourth_news.setSize("75px", "100px");
+        fifth_news.setSize("75px", "100px");
+        sixth_news.setSize("75px", "100px");
+    }
 }

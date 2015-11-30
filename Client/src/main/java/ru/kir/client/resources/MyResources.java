@@ -20,4 +20,22 @@ public interface MyResources extends ClientBundle {
 
     @Source("urls.txt")
     TextResource getUrls();
+
+    @Source("first_news.jpg")
+    ImageResource getFirstNew();
+
+    @Source("second_news.jpg")
+    ImageResource getSecondNew();
+
+    @Source("third_news.jpg")
+    ImageResource getThirdNew();
+
+    @Source("fourth_news.jpg")
+    ImageResource getFourthNew();
+
+    @Source("fifth_news.jpg")
+    ImageResource getFifthNew();
+
+    @Source("sixth_news.jpg")
+    ImageResource getSixthtNew();
 }

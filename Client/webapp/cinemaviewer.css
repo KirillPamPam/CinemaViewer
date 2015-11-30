@@ -32,3 +32,11 @@ body {
     border: 1px solid #BBBBBB;
     padding: 3px;
 }
+
+.labelWestAndEast {
+    font-size: 25px;
+}
+
+.labelCenter {
+    font-size: 20px;
+}

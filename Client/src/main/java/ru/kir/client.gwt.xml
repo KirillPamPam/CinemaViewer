@@ -8,7 +8,7 @@
     <inherits name="com.google.gwt.resources.Resources" />
 
     <!-- Specify the app entry point class.                   -->
-    <entry-point class='ru.kir.client.CinemaViewer'/>
+    <entry-point class='ru.kir.client.composition.CinemaViewer'/>
 
     <source path='client'/>
     <source path='shared'/>

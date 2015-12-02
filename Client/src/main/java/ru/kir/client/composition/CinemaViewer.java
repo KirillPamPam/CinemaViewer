@@ -1,4 +1,4 @@
-package ru.kir.client;
+package ru.kir.client.composition;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;

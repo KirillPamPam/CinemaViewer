@@ -40,3 +40,17 @@ body {
 .labelCenter {
     font-size: 20px;
 }
+
+.border {
+    border-style: double;
+    padding: 5px;
+}
+
+.imageFloat {
+    float: left;
+    padding: 10px;
+}
+
+.styleNews {
+    text-align: justify;
+}

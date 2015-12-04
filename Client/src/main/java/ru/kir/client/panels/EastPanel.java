@@ -18,13 +18,15 @@ public class EastPanel extends VerticalPanel {
     private Label soonInCinema1 = new Label("Soon in the cinema");
     private Image secondPoster = new Image(MyResources.INSTANCE.getThirdPoster());
     private Label actor = new Label("Actor");
+    private static volatile EastPanel eastPanel;
 
-    public EastPanel() {
-        addComposition();
-        goToSite();
+    private EastPanel() {
+
     }
 
     private void addComposition() {
+        goToSite();
+
         secondPoster.getElement().getStyle().setCursor(Style.Cursor.POINTER);
         soonInCinema1.setStyleName("labelWestAndEast");
         actor.setStyleName("labelWestAndEast");
@@ -44,6 +46,20 @@ public class EastPanel extends VerticalPanel {
                 Window.open(secondSite, null, null);
             }
         });
+    }
+
+    public static EastPanel create() {
+        EastPanel localEastPanel = eastPanel;
+        if(localEastPanel == null) {
+            synchronized (EastPanel.class) {
+                localEastPanel = eastPanel;
+                if(localEastPanel == null) {
+                    eastPanel = localEastPanel = new EastPanel();
+                }
+            }
+        }
+        localEastPanel.addComposition();
+        return localEastPanel;
     }
 
 }

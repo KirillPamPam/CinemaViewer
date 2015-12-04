@@ -1,4 +1,4 @@
-package ru.kir.client.composition;
+package ru.kir.client.main;
 
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockPanel;
@@ -14,9 +14,9 @@ import ru.kir.client.panels.WestPanel;
  */
 public class CinemaComposition extends Composite {
     private DockPanel dockPanel = new DockPanel();
-    private WestPanel westPanel = new WestPanel();
-    private EastPanel eastPanel = new EastPanel();
-    private NorthPanel northPanel = new NorthPanel();
+    private WestPanel westPanel = WestPanel.create();
+    private EastPanel eastPanel = EastPanel.create();
+    private NorthPanel northPanel = NorthPanel.create();
     private CenterPanel centerPanel = new CenterPanel();
 
     public CinemaComposition() {
@@ -35,11 +35,11 @@ public class CinemaComposition extends Composite {
         dockPanel.add(northPanel, DockPanel.NORTH);
         dockPanel.add(centerPanel, DockPanel.CENTER);
 
-
         dockPanel.setCellHorizontalAlignment(westPanel, HasHorizontalAlignment.ALIGN_CENTER);
         dockPanel.setCellHorizontalAlignment(eastPanel, HasHorizontalAlignment.ALIGN_CENTER);
         dockPanel.setCellHorizontalAlignment(northPanel, HasHorizontalAlignment.ALIGN_CENTER);
 
         dockPanel.setCellHeight(northPanel, "100px");
+
     }
 }

@@ -22,4 +22,8 @@ public class CinemaService {
         }
     }
 
+    public static String[] getNews() {
+        return MyResources.INSTANCE.getNews().getText().split("\n");
+    }
+
 }

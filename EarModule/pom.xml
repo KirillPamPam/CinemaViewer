@@ -51,11 +51,9 @@
                 <version>2.1</version>
                 <executions>
                     <execution>
-                        <phase>pre-integration-test</phase>
+                        <phase>install</phase>
                         <goals>
-                            <goal>
-                                deploy
-                            </goal>
+                            <goal>redeploy</goal>
                         </goals>
                         <configuration>
                             <glassfishDirectory>${local.glassfish.home}</glassfishDirectory>

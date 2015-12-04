@@ -11,9 +11,9 @@ import com.google.gwt.user.client.ui.TextBox;
 public class NorthPanel extends HorizontalPanel {
     private TextBox search = new TextBox();
     private Label cinemaViewer = new Label("CinemaViewer");
+    private static volatile NorthPanel northPanel;
 
-    public NorthPanel() {
-        addComposition();
+    private NorthPanel() {
     }
 
     private void addComposition() {
@@ -27,6 +27,20 @@ public class NorthPanel extends HorizontalPanel {
         add(search);
         setCellVerticalAlignment(search, HasVerticalAlignment.ALIGN_MIDDLE);
         setCellVerticalAlignment(cinemaViewer, HasVerticalAlignment.ALIGN_BOTTOM);
+    }
+
+    public static NorthPanel create() {
+        NorthPanel localNorthPanel = northPanel;
+        if(localNorthPanel == null) {
+            synchronized (EastPanel.class) {
+                localNorthPanel = northPanel;
+                if(localNorthPanel == null) {
+                    northPanel = localNorthPanel = new NorthPanel();
+                }
+            }
+        }
+        localNorthPanel.addComposition();
+        return localNorthPanel;
     }
 
 }

@@ -18,13 +18,14 @@ public class WestPanel extends VerticalPanel {
     private Image firstPoster = new Image(MyResources.INSTANCE.getFirstPoster());
     private Label soonInCinema = new Label("Soon in the cinema");
     private Label filmOfDay = new Label("Film of day");
+    private static volatile WestPanel westPanel;
 
-    public WestPanel() {
-        addComposition();
-        goToSite();
+    private WestPanel() {
     }
 
     private void addComposition() {
+        goToSite();
+
         firstPoster.getElement().getStyle().setCursor(Style.Cursor.POINTER);
         soonInCinema.setStyleName("labelWestAndEast");
         filmOfDay.setStyleName("labelWestAndEast");
@@ -44,6 +45,20 @@ public class WestPanel extends VerticalPanel {
                 Window.open(firstSite, null, null);
             }
         });
+    }
+
+    public static WestPanel create() {
+        WestPanel localWestPanel = westPanel;
+        if(localWestPanel == null) {
+            synchronized (EastPanel.class) {
+                localWestPanel = westPanel;
+                if(localWestPanel == null) {
+                    westPanel = localWestPanel = new WestPanel();
+                }
+            }
+        }
+        localWestPanel.addComposition();
+        return localWestPanel;
     }
 
 

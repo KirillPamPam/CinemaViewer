@@ -24,6 +24,9 @@ public interface MyResources extends ClientBundle {
     @Source("news_headers.txt")
     TextResource getHeaders();
 
+    @Source("news.txt")
+    TextResource getNews();
+
     @Source("first_news.jpg")
     ImageResource getFirstNew();
 

@@ -1,4 +1,4 @@
-package ru.kir.client.panels;
+package ru.kir.client.panels.east_panels;
 
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -30,6 +30,7 @@ public class EastPanel extends VerticalPanel {
         secondPoster.getElement().getStyle().setCursor(Style.Cursor.POINTER);
         soonInCinema1.setStyleName("labelWestAndEast");
         actor.setStyleName("labelWestAndEast");
+        setStyleName("border");
 
         add(soonInCinema1);
         add(secondPoster);

@@ -1,4 +1,4 @@
-package ru.kir.client.panels;
+package ru.kir.client.panels.west_panels;
 
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import ru.kir.client.common.CinemaService;
+import ru.kir.client.panels.east_panels.EastPanel;
 import ru.kir.client.resources.MyResources;
 
 /**
@@ -29,6 +30,7 @@ public class WestPanel extends VerticalPanel {
         firstPoster.getElement().getStyle().setCursor(Style.Cursor.POINTER);
         soonInCinema.setStyleName("labelWestAndEast");
         filmOfDay.setStyleName("labelWestAndEast");
+        setStyleName("border");
 
         add(soonInCinema);
         add(firstPoster);

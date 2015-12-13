@@ -29,8 +29,7 @@ body {
 }
 
 .dockpanel td {
-    border: 1px solid #BBBBBB;
-    padding: 3px;
+    padding: 2px;
 }
 
 .labelWestAndEast {
@@ -43,7 +42,7 @@ body {
 
 .border {
     border-style: double;
-    padding: 5px;
+    padding: 3px;
 }
 
 .imageFloat {

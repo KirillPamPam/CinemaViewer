@@ -1,4 +1,4 @@
-package ru.kir.client.panels;
+package ru.kir.client.panels.center_panels;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -41,6 +41,7 @@ public class CenterPanel extends VerticalPanel {
         Label rating = new Label("Rating of films");
         Label article = new Label("Articles");
 
+        grid.setStyleName("border");
         news.setStyleName("labelCenter");
         rating.setStyleName("labelCenter");
         article.setStyleName("labelCenter");

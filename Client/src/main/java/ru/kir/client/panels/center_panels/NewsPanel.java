@@ -1,10 +1,13 @@
-package ru.kir.client.panels;
+package ru.kir.client.panels.center_panels;
 
 import com.google.gwt.user.client.ui.*;
+import ru.kir.client.panels.north_panels.NorthPanel;
+import ru.kir.client.panels.west_panels.WestPanel;
+import ru.kir.client.panels.east_panels.EastPanel;
 import ru.kir.client.resources.MyResources;
 
 import static ru.kir.client.common.CinemaService.*;
-import static ru.kir.client.panels.CenterPanel.CURRENT_NEWS;
+import static ru.kir.client.panels.center_panels.CenterPanel.CURRENT_NEWS;
 
 /**
  * Created by Kirill Zhitelev on 03.12.2015.

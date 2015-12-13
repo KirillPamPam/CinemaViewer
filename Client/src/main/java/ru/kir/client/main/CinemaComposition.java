@@ -3,10 +3,10 @@ package ru.kir.client.main;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import ru.kir.client.panels.CenterPanel;
-import ru.kir.client.panels.EastPanel;
-import ru.kir.client.panels.NorthPanel;
-import ru.kir.client.panels.WestPanel;
+import ru.kir.client.panels.center_panels.CenterPanel;
+import ru.kir.client.panels.east_panels.EastPanel;
+import ru.kir.client.panels.north_panels.NorthPanel;
+import ru.kir.client.panels.west_panels.WestPanel;
 
 
 /**

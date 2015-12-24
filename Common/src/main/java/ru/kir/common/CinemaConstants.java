@@ -24,5 +24,10 @@ public class CinemaConstants {
     public static final String ESTIMATE = "estimate";
     public static final String DESCRIPTION = "description";
     public static final String FILMS = "films";
+    public static final String PERSON_LAST_NAME = "person_lastname";
+    public static final String PERSON_NAME = "person_name";
+    public static final String PERSON_FULLNAME = "person_fullname";
+    public static final String CONTENT = "content";
+    public static final String FILM_NAME1 = "film_name";
 
 }

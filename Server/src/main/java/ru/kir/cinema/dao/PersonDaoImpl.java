@@ -1,5 +1,7 @@
 package ru.kir.cinema.dao;
 
+import org.json.JSONObject;
+
 import static ru.kir.cinema.util.Util.getPersonContent;
 import static ru.kir.common.CinemaConstants.*;
 
@@ -9,17 +11,17 @@ import static ru.kir.common.CinemaConstants.*;
 public class PersonDaoImpl implements PersonDao {
 
     @Override
-    public String getByLastName(String lastName) {
+    public JSONObject getByLastName(String lastName) {
         return getPersonContent(LAST_NAME, lastName);
     }
 
     @Override
-    public String getByName(String name) {
+    public JSONObject getByName(String name) {
         return getPersonContent(FIRST_NAME, name);
     }
 
     @Override
-    public String getByFullName(String fullName) {
+    public JSONObject getByFullName(String fullName) {
         return getPersonContent(FULL_NAME, fullName);
     }
 }

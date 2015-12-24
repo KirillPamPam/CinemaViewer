@@ -9,7 +9,6 @@ import com.google.gwt.resources.client.TextResource;
  * Created by Kirill Zhitelev on 25.11.2015.
  */
 public interface MyResources extends ClientBundle {
-
     MyResources INSTANCE = GWT.create(MyResources.class);
 
     @Source("first.jpg")
@@ -44,4 +43,5 @@ public interface MyResources extends ClientBundle {
 
     @Source("sixth_news.jpg")
     ImageResource getSixthtNew();
+
 }

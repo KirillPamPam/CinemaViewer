@@ -1,5 +1,6 @@
 package ru.kir.cinema.service;
 
+import org.json.JSONObject;
 import ru.kir.cinema.dao.FilmDao;
 import ru.kir.cinema.dao.FilmDaoImpl;
 
@@ -10,7 +11,12 @@ public class FilmServiceImpl implements FilmService {
     private FilmDao filmDao = new FilmDaoImpl();
 
     @Override
-    public String getByName(String name) {
+    public JSONObject getByName(String name) {
         return filmDao.getByName(name);
+    }
+
+    @Override
+    public JSONObject getById(Integer id) {
+        return filmDao.getById(id);
     }
 }

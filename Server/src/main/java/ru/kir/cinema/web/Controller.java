@@ -1,5 +1,6 @@
 package ru.kir.cinema.web;
 
+import org.json.JSONObject;
 import ru.kir.cinema.service.FilmService;
 import ru.kir.cinema.service.FilmServiceImpl;
 import ru.kir.cinema.service.PersonService;
@@ -9,8 +10,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import java.util.ArrayList;
-import java.util.List;
+
+import static ru.kir.common.CinemaConstants.*;
 
 /**
  * Created by Kirill Zhitelev on 12.12.2015.
@@ -24,14 +25,14 @@ public class Controller {
     @GET
     @Produces("application/json")
     public String getContent(@PathParam("content") String content) {
-        List<String> contents = new ArrayList<>();
+        JSONObject jsonObject = new JSONObject();
 
-        contents.add(personService.getByLastName(content));
-        contents.add(personService.getByName(content));
-        contents.add(personService.getByFullName(content));
-        contents.add(filmService.getByName(content));
+        jsonObject.put(PERSON_LAST_NAME, personService.getByLastName(content));
+        jsonObject.put(PERSON_NAME, personService.getByName(content));
+        jsonObject.put(PERSON_FULLNAME, personService.getByFullName(content));
+        jsonObject.put(FILM_NAME1, filmService.getByName(content));
 
-        return contents.toString();
+        return new JSONObject().put(CONTENT, jsonObject).toString();
     }
 
 }

@@ -12,8 +12,8 @@
     <modules>
         <module>client</module>
         <module>server</module>
-        <module>earmodule</module>
         <module>common</module>
+        <module>earmodule</module>
     </modules>
 
 </project>

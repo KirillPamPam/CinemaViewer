@@ -67,7 +67,7 @@ public class Film {
         return director;
     }
 
-    public Country getCountry() {
+    public Country getCountryId() {
         return country;
     }
 
@@ -75,7 +75,7 @@ public class Film {
         return budget;
     }
 
-    public Genre getGenre() {
+    public Genre getGenreId() {
         return genre;
     }
 

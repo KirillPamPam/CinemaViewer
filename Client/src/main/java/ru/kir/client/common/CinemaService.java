@@ -22,6 +22,10 @@ public class CinemaService {
         }
     }
 
+    public static void setSizeToImage(Image image, String width, String height) {
+        image.setSize(width, height);
+    }
+
     public static String[] getNews() {
         return MyResources.INSTANCE.getNews().getText().split("\n");
     }

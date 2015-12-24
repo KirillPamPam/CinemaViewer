@@ -1,5 +1,6 @@
 package ru.kir.cinema.service;
 
+import org.json.JSONObject;
 import ru.kir.cinema.dao.PersonDao;
 import ru.kir.cinema.dao.PersonDaoImpl;
 
@@ -10,17 +11,17 @@ public class PersonServiceImpl implements PersonService {
     private PersonDao personDao = new PersonDaoImpl();
 
     @Override
-    public String getByLastName(String lastName) {
+    public JSONObject getByLastName(String lastName) {
         return personDao.getByLastName(lastName);
     }
 
     @Override
-    public String getByName(String name) {
+    public JSONObject getByName(String name) {
         return personDao.getByName(name);
     }
 
     @Override
-    public String getByFullName(String fullName) {
+    public JSONObject getByFullName(String fullName) {
         return personDao.getByFullName(fullName);
     }
 }

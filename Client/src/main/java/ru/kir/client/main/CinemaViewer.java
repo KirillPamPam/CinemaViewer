@@ -23,13 +23,16 @@ public class CinemaViewer implements EntryPoint {
                 try {
                     if (historyToken.length() == 0) {
                         History.newItem("main");
-                    } else if (historyToken.matches("news/[1234]")) {
+                    }
+                    else if (historyToken.matches("news/[1234]")) {
                         RootPanel.get().clear();
                         RootPanel.get().add(new NewsPanel());
-                    } else if (historyToken.equals("main")) {
+                    }
+                    else if (historyToken.equals("main")) {
                         RootPanel.get().clear();
                         RootPanel.get().add(new CinemaComposition());
-                    } else {
+                    }
+                    else {
                         throw new IndexOutOfBoundsException("no! " + historyToken);
                     }
                 } catch (IndexOutOfBoundsException e) {

@@ -7,6 +7,10 @@
 
     <inherits name="com.google.gwt.resources.Resources" />
 
+    <inherits name="com.google.gwt.json.JSON" />
+
+    <inherits name="com.google.gwt.http.HTTP"/>
+
     <!-- Specify the app entry point class.                   -->
     <entry-point class='ru.kir.client.main.CinemaViewer'/>
 

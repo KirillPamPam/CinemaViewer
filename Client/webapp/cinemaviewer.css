@@ -40,6 +40,10 @@ body {
     font-size: 20px;
 }
 
+.labelContent {
+    font-size: 16px;
+}
+
 .border {
     border-style: double;
     padding: 3px;
